@@ -14,6 +14,7 @@
       <th>Booking Time</th>
       <th>Guests #</th>
       <th>Approved?</th>
+      <th>Update</th>
     </tr>
   </thead>
   <tbody>
@@ -26,7 +27,8 @@
 	        <td><%= number_to_currency(booking.room.price) %></td>
 	        <td><%= booking.created_at %></td>
 	        <td><%= booking.guest_number %></td>
-	        <td><%= booking.approved %></td>
+	        <td><%= yes_no(booking.approved) %></td>
+	        <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
 	      </tr>
 			<% end %>
 		<% end %>

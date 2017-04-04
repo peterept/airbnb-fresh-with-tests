@@ -7,4 +7,8 @@ class PagesController < ApplicationController
   	# render template for that host
   	@rooms = current_user.rooms
   end
+
+  def guest_dashboard
+  	@bookings = current_user.bookings
+  end
 end
